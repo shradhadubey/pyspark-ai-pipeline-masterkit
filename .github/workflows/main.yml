@@ -14,4 +14,6 @@ jobs:
         run: |
           pip install pyspark pandas pytest
       - name: Run Tests
-        run: pytest tests/
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          pytest tests/
